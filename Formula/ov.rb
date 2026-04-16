@@ -5,21 +5,21 @@
 class Ov < Formula
   desc "Zero-knowledge, quantum-safe secret manager for AI coding agents"
   homepage "https://opaquevault.com"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.opaquevault.com/v0.5.0/ov_darwin_amd64.tar.gz"
-      sha256 "1895295655753b46b5cc0c6e7ca9121ee1698231f1aa60d421f0164501ecf09e"
+      url "https://releases.opaquevault.com/v0.5.1/ov_darwin_amd64.tar.gz"
+      sha256 "c45e721482f0d57f61016ed6ce3f052b06f606e282ada6b5028eedc1738065bf"
 
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.opaquevault.com/v0.5.0/ov_darwin_arm64.tar.gz"
-      sha256 "c897f5ef5c7ade6bd2c6567800e9c2d478e46a18bc5f57e1fc7e31797f1a0a05"
+      url "https://releases.opaquevault.com/v0.5.1/ov_darwin_arm64.tar.gz"
+      sha256 "aa402cde13eba5f28ebbab7a84bc8faa51e10d99a4811f76119e01a10ec3010a"
 
       define_method(:install) do
         bin.install "ov"
@@ -29,15 +29,15 @@ class Ov < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.opaquevault.com/v0.5.0/ov_linux_amd64.tar.gz"
-      sha256 "348aa26c6746a58c71f29e180a3252fe18b9a66d244f68e77d6f3db864759363"
+      url "https://releases.opaquevault.com/v0.5.1/ov_linux_amd64.tar.gz"
+      sha256 "1a2bb59cde0d52311ed0b83e37d89b588e30d7a95bc0cf224ac509ddc444da0b"
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.opaquevault.com/v0.5.0/ov_linux_arm64.tar.gz"
-      sha256 "11cd98ad7ae7fc36801dc23a21a8914d795a67d7f7711d77e349bd5c993a5664"
+      url "https://releases.opaquevault.com/v0.5.1/ov_linux_arm64.tar.gz"
+      sha256 "57f9fe9a1230fe7d265f4e22fe3bd20a505300212e77adcb8ecd1e1fbb118ea4"
       define_method(:install) do
         bin.install "ov"
       end
