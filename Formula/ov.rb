@@ -11,7 +11,7 @@ class Ov < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://releases.opaquevault.com/v0.6.4/ov_darwin_amd64.tar.gz"
-      sha256 "8d6e18eac8cc3755641f7398c78ad16cea15a1beaf903f388eadadbe6c482698"
+      sha256 "a954374977863cf4a832511d38f1c1dae5509a6d7a924ed21548aecbc3703c90"
 
       define_method(:install) do
         bin.install "ov"
@@ -19,7 +19,7 @@ class Ov < Formula
     end
     if Hardware::CPU.arm?
       url "https://releases.opaquevault.com/v0.6.4/ov_darwin_arm64.tar.gz"
-      sha256 "a08f86429bcd2d973bc0d8ca7116167327381a23d3df6f302f465e993ec7b7ae"
+      sha256 "826bf52aa588f0278f4d9da14b9a17354463c58fe5d838bf9c4a7a9e029afb1f"
 
       define_method(:install) do
         bin.install "ov"
@@ -30,14 +30,14 @@ class Ov < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://releases.opaquevault.com/v0.6.4/ov_linux_amd64.tar.gz"
-      sha256 "e3d7a498c8b05e0cc6a0a8d139c3ee1fd0b1a10b36f973eb9b3a8f04aeaca4fb"
+      sha256 "49f136f7db072501c0d04fa4c5de1428d7c95b226d1d3f4bd109c6a41d494e6f"
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://releases.opaquevault.com/v0.6.4/ov_linux_arm64.tar.gz"
-      sha256 "fd32a3078a37cb51920a2632975ab3c3824b0a2b8cd7a44f4b04aa14c5a46af6"
+      sha256 "6e8e729d198722f34f50f6b50228a234c5ab6378db4f996627d2b4fe80e97cc7"
       define_method(:install) do
         bin.install "ov"
       end
