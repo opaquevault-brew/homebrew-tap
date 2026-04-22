@@ -5,21 +5,21 @@
 class Ov < Formula
   desc "Zero-knowledge, quantum-safe secret manager for AI coding agents"
   homepage "https://opaquevault.com"
-  version "0.9.4-alpha.3"
+  version "0.9.4-alpha.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.opaquevault.com/v0.9.4-alpha.3/ov_darwin_amd64.tar.gz"
-      sha256 "8c47857ce4584d0bc406f531618a8a9b867aa67650c1d3c83847d0153c71693c"
+      url "https://releases.opaquevault.com/v0.9.4-alpha.4/ov_darwin_amd64.tar.gz"
+      sha256 "100dc75c52799d383d74f2ccd84e38a754d5807f2cd4d09844cfcf83862aef87"
 
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.opaquevault.com/v0.9.4-alpha.3/ov_darwin_arm64.tar.gz"
-      sha256 "88ebd7f26d3c8e0b2c2c067cf0ce47fec383a48fcaa244b4dfbca4cf7b67bbec"
+      url "https://releases.opaquevault.com/v0.9.4-alpha.4/ov_darwin_arm64.tar.gz"
+      sha256 "49f72d0e4c7c2cc38640094aa81ad42d7152f3d1dea03815ea0700d4c3fd98d5"
 
       define_method(:install) do
         bin.install "ov"
@@ -29,15 +29,15 @@ class Ov < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.opaquevault.com/v0.9.4-alpha.3/ov_linux_amd64.tar.gz"
-      sha256 "c6a12d272fb5a6044f22d4ef945ee2c909eb64312b891ba6d25f404e67de6be9"
+      url "https://releases.opaquevault.com/v0.9.4-alpha.4/ov_linux_amd64.tar.gz"
+      sha256 "364bac5b957867393dd0efd2231794f2c868eeafe5c60b9b8012ebdfa719495b"
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.opaquevault.com/v0.9.4-alpha.3/ov_linux_arm64.tar.gz"
-      sha256 "b345c5659ea18477eb183f37663e40c690adbe1da6b43ca806e026d6eed78be2"
+      url "https://releases.opaquevault.com/v0.9.4-alpha.4/ov_linux_arm64.tar.gz"
+      sha256 "e9e86330b8bf5d881f217f78c0d5048787cfdcd00b3a9990743c417cdf760311"
       define_method(:install) do
         bin.install "ov"
       end
