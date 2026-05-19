@@ -5,21 +5,21 @@
 class Ov < Formula
   desc "Zero-knowledge, quantum-safe secret manager for AI coding agents"
   homepage "https://opaquevault.com"
-  version "0.11.2"
+  version "0.11.3-hotfix.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.opaquevault.com/v0.11.2/ov_darwin_amd64.tar.gz"
-      sha256 "bc91904113836bc6d85cf14bac02898a562db8eb2bf9526df6a652cde63303f4"
+      url "https://releases.opaquevault.com/v0.11.3-hotfix.1/ov_darwin_amd64.tar.gz"
+      sha256 "225c06e7076d88160884189ddc1c1a6166d857008102d7ad1fff6bfe5e989585"
 
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.opaquevault.com/v0.11.2/ov_darwin_arm64.tar.gz"
-      sha256 "32a8bd9e364a051574f6a797d6bb712a7e48bd88970dfffddf13bfaa3b057f55"
+      url "https://releases.opaquevault.com/v0.11.3-hotfix.1/ov_darwin_arm64.tar.gz"
+      sha256 "a246398d9004ac1b3d5538aa7e20d9d3fc3ed3dc575652f7dbb331ff969409e3"
 
       define_method(:install) do
         bin.install "ov"
@@ -29,15 +29,15 @@ class Ov < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.opaquevault.com/v0.11.2/ov_linux_amd64.tar.gz"
-      sha256 "7f0e1c145d35d837e1e945369e66210149ce4a4006315bf21e560a644e8f4887"
+      url "https://releases.opaquevault.com/v0.11.3-hotfix.1/ov_linux_amd64.tar.gz"
+      sha256 "79b6a976af7ed8422e22a6d47f9030e84c6842ba6724cdabf0158d1296057a32"
       define_method(:install) do
         bin.install "ov"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.opaquevault.com/v0.11.2/ov_linux_arm64.tar.gz"
-      sha256 "d7bbe1abb8151a5b9199756e6d241f4fd4a8866192fa4c1302903692f56708be"
+      url "https://releases.opaquevault.com/v0.11.3-hotfix.1/ov_linux_arm64.tar.gz"
+      sha256 "f95e93f60293bbb06cdc5936b429210645c82a75ee97f842b264053921572e5c"
       define_method(:install) do
         bin.install "ov"
       end
