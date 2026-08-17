@@ -12,8 +12,10 @@ Or tap first, then install:
 
 ```bash
 brew tap opaquevault-brew/tap
-brew install ov
+brew install opaquevault-brew/tap/ov
 ```
+
+Use the fully-qualified name — a bare `brew install ov` installs homebrew-core's `ov`, an unrelated terminal pager. If you already have that package installed, run `brew unlink ov` first to avoid a `bin/ov` conflict.
 
 Works on macOS (Apple Silicon and Intel) and Linux (x86_64 and arm64).
 
@@ -44,12 +46,7 @@ brew untap opaquevault-brew/tap
 
 ## Release verification
 
-The formula downloads binaries from `releases.opaquevault.com` and pins their SHA-256 checksums. Independently of Homebrew's checks, every release's checksums file is signed with this minisign key:
-
-```
-untrusted comment: minisign public key F89BAB08772C1C0B
-RWQLHCx3CKub+D3Wnc1zX/YBVr1fJD5SrK08d2xp4XoTQipbFET8V0fU
-```
+The formula downloads binaries from `releases.opaquevault.com` and pins their SHA-256 checksums. Independently of Homebrew's checks, every release's checksums file is signed with the OpaqueVault minisign key, published at [opaquevault.com/.well-known/ov-release.pub](https://opaquevault.com/.well-known/ov-release.pub).
 
 How to verify, and what to do if verification fails: https://opaquevault.com/docs/security/release-signing
 
