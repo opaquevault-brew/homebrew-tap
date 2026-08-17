@@ -6,7 +6,7 @@ class Ov < Formula
   desc "Zero-knowledge, quantum-safe secret manager for AI coding agents"
   homepage "https://opaquevault.com"
   version "0.16.0"
-  license "MIT"
+  license "BUSL-1.1"
 
   on_macos do
     if Hardware::CPU.intel?
